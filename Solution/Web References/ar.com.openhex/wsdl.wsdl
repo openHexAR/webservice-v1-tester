@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:ohWDSL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:ohWDSL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:ohWDSL">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ws..vo_autorizarRequest">
+    <wsdl:part name="financiador" type="xsd:string" />
+    <wsdl:part name="usr" type="xsd:string" />
+    <wsdl:part name="pwd" type="xsd:string" />
+    <wsdl:part name="afiliado" type="xsd:string" />
+    <wsdl:part name="id_empresa" type="xsd:int" />
+    <wsdl:part name="id_prestador" type="xsd:int" />
+    <wsdl:part name="cantidad_1" type="xsd:int" />
+    <wsdl:part name="practica_1" type="xsd:decimal" />
+    <wsdl:part name="cantidad_2" type="xsd:int" />
+    <wsdl:part name="practica_2" type="xsd:decimal" />
+    <wsdl:part name="cantidad_3" type="xsd:int" />
+    <wsdl:part name="practica_3" type="xsd:decimal" />
+    <wsdl:part name="cantidad_4" type="xsd:int" />
+    <wsdl:part name="practica_4" type="xsd:decimal" />
+    <wsdl:part name="cantidad_5" type="xsd:int" />
+    <wsdl:part name="practica_5" type="xsd:decimal" />
+    <wsdl:part name="cantidad_6" type="xsd:int" />
+    <wsdl:part name="practica_6" type="xsd:decimal" />
+    <wsdl:part name="cantidad_7" type="xsd:int" />
+    <wsdl:part name="practica_7" type="xsd:decimal" />
+    <wsdl:part name="cantidad_8" type="xsd:int" />
+    <wsdl:part name="practica_8" type="xsd:decimal" />
+    <wsdl:part name="cantidad_9" type="xsd:int" />
+    <wsdl:part name="practica_9" type="xsd:decimal" />
+    <wsdl:part name="cantidad_10" type="xsd:int" />
+    <wsdl:part name="practica_10" type="xsd:decimal" />
+    <wsdl:part name="cantidad_11" type="xsd:int" />
+    <wsdl:part name="practica_11" type="xsd:decimal" />
+    <wsdl:part name="cantidad_12" type="xsd:int" />
+    <wsdl:part name="practica_12" type="xsd:decimal" />
+    <wsdl:part name="cantidad_13" type="xsd:int" />
+    <wsdl:part name="practica_13" type="xsd:decimal" />
+    <wsdl:part name="cantidad_14" type="xsd:int" />
+    <wsdl:part name="practica_14" type="xsd:decimal" />
+    <wsdl:part name="cantidad_15" type="xsd:int" />
+    <wsdl:part name="practica_15" type="xsd:decimal" />
+    <wsdl:part name="cantidad_16" type="xsd:int" />
+    <wsdl:part name="practica_16" type="xsd:decimal" />
+    <wsdl:part name="cantidad_17" type="xsd:int" />
+    <wsdl:part name="practica_17" type="xsd:decimal" />
+    <wsdl:part name="cantidad_18" type="xsd:int" />
+    <wsdl:part name="practica_18" type="xsd:decimal" />
+    <wsdl:part name="cantidad_19" type="xsd:int" />
+    <wsdl:part name="practica_19" type="xsd:decimal" />
+    <wsdl:part name="cantidad_20" type="xsd:int" />
+    <wsdl:part name="practica_20" type="xsd:decimal" />
+  </wsdl:message>
+  <wsdl:message name="ws..vo_autorizarResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ws..vo_anularRequest">
+    <wsdl:part name="financiador" type="xsd:string" />
+    <wsdl:part name="usr" type="xsd:string" />
+    <wsdl:part name="pwd" type="xsd:string" />
+    <wsdl:part name="id_sucursal" type="xsd:int" />
+    <wsdl:part name="id_autorizacion" type="xsd:int" />
+    <wsdl:part name="id_prestador" type="xsd:int" />
+    <wsdl:part name="numero_afiliado" type="xsd:string" />
+    <wsdl:part name="id_empresa" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="ws..vo_anularResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ws..vo_verificar_afiliadoRequest">
+    <wsdl:part name="financiador" type="xsd:string" />
+    <wsdl:part name="usr" type="xsd:string" />
+    <wsdl:part name="pwd" type="xsd:string" />
+    <wsdl:part name="numero_afiliado" type="xsd:string" />
+    <wsdl:part name="id_empresa" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="ws..vo_verificar_afiliadoResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="ohWSDLPortType">
+    <wsdl:operation name="ws..vo_autorizar">
+      <documentation>Autoriza un Bono.</documentation>
+      <wsdl:input message="tns:ws..vo_autorizarRequest" />
+      <wsdl:output message="tns:ws..vo_autorizarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ws..vo_anular">
+      <documentation>Anula un Bono.</documentation>
+      <wsdl:input message="tns:ws..vo_anularRequest" />
+      <wsdl:output message="tns:ws..vo_anularResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ws..vo_verificar_afiliado">
+      <documentation>Verificar Afiliado.</documentation>
+      <wsdl:input message="tns:ws..vo_verificar_afiliadoRequest" />
+      <wsdl:output message="tns:ws..vo_verificar_afiliadoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ohWSDLBinding" type="tns:ohWSDLPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="ws..vo_autorizar">
+      <soap:operation soapAction="urn:wsWSDL#autorizar" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:wsWSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:wsWSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws..vo_anular">
+      <soap:operation soapAction="urn:wsWSDL#anular" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:wsWSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:wsWSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ws..vo_verificar_afiliado">
+      <soap:operation soapAction="urn:wsWSDL#verificar_afiliado" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:wsWSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:wsWSDL" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ohWSDL">
+    <wsdl:port name="ohWSDLPort" binding="tns:ohWSDLBinding">
+      <soap:address location="http://ws.openhex.com.ar/index.php/ws/wsdl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
